@@ -1,0 +1,2 @@
+id;name;authorUUID;description;worldUUID;x;y;z;yaw;pitch;splits
+0;test;419d1977-7429-4d4a-ae0b-51691854d707;;bfa9b579-ec3f-4170-bdc0-23be13f78810;5.5;75;205.5;-90;24;9,10,11,12,13,14
