@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Split</title>
+	<meta name="author" content="fowwo">
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="Web/style.css">
+</head>
+<body>
+	<div style="display: flex; margin: 1vmin 0 1vmin 1vmin;">
+		<div id="map">
+			<span id="timer">0:00.000</span>
+		</div>
+		<div id="sidebox">
+			<div id="course-title-author"><img src="Web/Images/play-button.png" id="replay-button" width="40px" style="padding-right: 10px;"><span id="course-title"></span><span id="course-author"></span></div>
+			<ul style="list-style: none; margin: 0; padding: 0 0 10px 0;">
+				<li><div class="dropdown clickable" id="course-list-button">Courses</div>
+					<div class="dropdown-content-container">
+						<ul class="dropdown-content" id="course-list">
+							<li><div style="color: #fff5; background-color: #0000; text-shadow: 0 0 0 #0000; cursor: default;">No courses to list.</div></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<table id="leaderboard">
+				<tr>
+					<th style="min-width: 20px">#</th>
+					<th class="time-cell">Time</th>
+					<th style="width: 100%; text-align: left;">Name</th>
+				</tr>
+				<tr>
+					<td style="text-align: center; filter: opacity(25%);">--</td>
+					<td style="text-align: center; filter: opacity(25%);">--:----.------</td>
+					<td style="filter: opacity(25%)";>------------------------------</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="Web/Class/PlayerIcon.js"></script>
+<script type="text/javascript" src="Web/Class/Region.js"></script>
+<script type="text/javascript" src="Web/Class/Course.js"></script>
+<script type="text/javascript" src="Web/Class/Score.js"></script>
+<script type="text/javascript" src="Web/time.js"></script>
+<script type="text/javascript" src="Web/ui.js"></script>
+<script type="text/javascript" src="Web/data.js"></script>
+<script type="text/javascript" src="Web/replay.js"></script>
+<script type="text/javascript" src="Web/dropdown.js"></script>
+</html>

@@ -1,0 +1,13 @@
+{
+	"0": {
+		"image": "./Web/Images/Courses/test.png",
+		"min": {
+			"x": 7.5,
+			"z": 192
+		},
+		"max": {
+			"x": 62.5,
+			"z": 247
+		}
+	}
+}
