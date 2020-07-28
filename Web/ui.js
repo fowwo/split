@@ -15,7 +15,7 @@ function selectCourse(id) {
 	}
 }
 function listScores(course, all = false, user = null) {
-	let table = document.getElementById("leaderboard");
+	let table = document.getElementById("leaderboard-body");
 	resetLeaderboard();
 	let scores = [...course.scores];
 	scores = scores.sort((a, b) => { return a.compareTo(b); });
