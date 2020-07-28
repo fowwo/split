@@ -126,7 +126,7 @@ img.player-icon {
 #leaderboard {
     box-shadow: 0 0 1vmin #0005;
 }
-#leaderboard tr:nth-child(odd) {
+#leaderboard tr:nth-child(even) {
 	background-color: #0002;
 }
 #leaderboard td, #leaderboard th {
