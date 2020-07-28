@@ -28,7 +28,7 @@ function watchCourse(course, user = null) {
         // Create players
         var replays = [];
         for (var i = 0; i < scores.length; i++) {
-            replays.push({ player: new PlayerIcon(i, (scores.length - i - 1) * 360 / scores.length, i * 2), path: [...scores[i].replay] });
+            replays.push({ player: new PlayerIcon(i, (scores.length - i - 1) * 360 / scores.length), path: [...scores[i].replay] });
             let pop = replays[i].path.shift();
             replays[i].player.move(pop.x, pop.z, pop.yaw);
         }
