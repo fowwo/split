@@ -1,9 +1,10 @@
 class PlayerIcon {
-	constructor(id, hue) {
+	constructor(id, hue, z = 0) {
 		// Create image element
 		var e = document.createElement("img");
 		e.id = `Player${id}`;
 		e.classList.add("player-icon");
+		e.style.zIndex = z;
 		e.style.filter = `hue-rotate(${hue}deg) drop-shadow(0 0 5px hsl(${hue}, 100%, 20%))`;
 		document.getElementById("map").appendChild(e);
 
