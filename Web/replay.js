@@ -10,7 +10,7 @@ document.getElementById("replay-button").onclick = (() => {
 function clearPlayers() {
     let map = document.getElementById("map");
     for (var i = 0; i < map.childElementCount; i++) {
-        if (map.children[i].classList.contains("player-icon")) {
+        if (map.children[i].classList.contains("player-icon") || map.children[i].classList.contains("player-canvas")) {
             map.children[i].remove();
             i--;
         }
@@ -28,9 +28,11 @@ function watchCourse(course, user = null) {
         // Create players
         var replays = [];
         for (var i = 0; i < scores.length; i++) {
-            replays.push({ player: new PlayerIcon(i, (scores.length - i - 1) * 360 / scores.length), path: [...scores[i].replay] });
+            let hue = (scores.length - i - 1) * 360 / scores.length;
+            replays.push({ player: new PlayerIcon(i, hue, i + scores.length), path: [...scores[i].replay], canvas: new PlayerCanvas(i, hue, i) });
             let pop = replays[i].path.shift();
             replays[i].player.move(pop.x, pop.z, pop.yaw);
+            replays[i].canvas.moveTo(pop.x, pop.z);
         }
 
         // Watch replays
@@ -43,6 +45,7 @@ function watchCourse(course, user = null) {
                 while (replays[i].path.length > 0 && replays[i].path[0].time <= timeSince(replayStart)) {
                     let pop = replays[i].path.shift();
                     replays[i].player.move(pop.x, pop.z, pop.yaw);
+                    replays[i].canvas.lineTo(pop.x, pop.z);
                 }
                 if (replays[i].path.length === 0) {
                     replays.splice(i, 1);

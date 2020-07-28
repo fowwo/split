@@ -43,6 +43,11 @@ ul.button-list.left li button {
 ul.button-list.right li button {
     text-align: left;
 }
+canvas.player-canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 img.player-icon {
     display: block;
     content: url("./Images/Player.png");
